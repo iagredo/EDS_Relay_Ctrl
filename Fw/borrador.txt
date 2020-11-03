@@ -1,0 +1,94 @@
+		//	***	LECTURA DE I1	***//
+		if ( (PINC & 1<<PINC0) == 0 )
+		{
+			PORTD |= (1<<PIND3);	//SET1 HIGH 
+			PORTD &= ~(1<<PIND4);	//RST1 LOW
+			
+			if (I1 == 0)
+			{	I1 = 1;
+				ENABLE_EXE();
+			}
+						
+		} 
+		else
+		{
+			PORTD &= ~(1<<PIND3);	//SET1 LOW
+			PORTD |= (1<<PIND4);	//RST1 HIGH
+			if (I1 == 1)
+			{	I1 = 0;
+				ENABLE_EXE();
+			}
+					
+		}
+
+		//	***	LECTURA DE I2	***//
+		if ( (PINC & 1<<PINC1) == 0 )
+		{
+			PORTD |= (1<<PIND5);	//SET2 HIGH
+			PORTD &= ~(1<<PIND6);	//RST2 LOW
+			if (I2 == 0)
+			{	I2 = 1;
+				ENABLE_EXE();
+			}
+		}
+		else
+		{
+			PORTD &= ~(1<<PIND5);	//SET2 LOW
+			PORTD |= (1<<PIND6);	//RST2 HIGH
+			if (I2 == 1)
+			{	I2 = 0;
+				ENABLE_EXE();
+			}
+		}
+
+		//	***	LECTURA DE I3	***//
+		if ( (PINC & 1<<PINC2) == 0 )
+		{
+			PORTD |= (1<<PIND7);	//SET3 HIGH
+			PORTB &= ~(1<<PINB0);	//RST3 LOW
+			if (I3 == 0)
+			{	I3 = 1;
+				ENABLE_EXE();
+			}
+		}
+		else
+		{
+			PORTD &= ~(1<<PIND7);	//SET3 LOW
+			PORTB |= (1<<PINB0);	//RST3 HIGH
+			if (I3 == 1)
+			{	I3 = 0;
+				ENABLE_EXE();
+			}
+		}
+
+
+
+
+*****************************
+
+if ( (LAST_PORTC) != 0x0F)
+{
+	//PORTB |= (1<<PINB2);
+		
+	uint8_t CC = ~(LAST_PORTC);
+	//PORTD = (CC<<2);
+	sprintf(str_buffer, "test: %X \n\r",CC);
+	send_string(str_buffer);
+	
+	switch (CC){
+		case 0XF1:	
+		PORTD |= (1<<PIND3);
+		break;
+		case 0XF2:	
+		PORTD |= (1<<PIND4);
+		break;
+		case 0XF4:	
+		PORTD |= (1<<PIND5);
+		break;
+		case 0XF8:	
+		PORTD |= (1<<PIND6);
+		break;		
+	}
+	
+	
+}

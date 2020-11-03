@@ -1,0 +1,48 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#(c) SnapEDA 2016 (snapeda.com)
+#This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA) with Design Exception 1.0
+#
+# 691313510006
+#
+DEF 691313510006 J 0 40 Y N 1 L N
+F0 "J" -296 -47 50 H V L BNN
+F1 "691313510006" -295 -119 50 H V L BNN
+F2 "691313510006" 0 0 50 H I L BNN
+F3 "https://www.we-online.com/catalog/datasheet/691313510006.pdf" 0 0 50 H I L BNN
+F4 "20A" 0 0 50 H I L BNN
+F5 "300V (AC)" 0 0 50 H I L BNN
+F6 "Horizontal" 0 0 50 H I L BNN
+F7 "6" 0 0 50 H I L BNN
+F8 "300V (AC)" 0 0 50 H I L BNN
+F9 "5.08mm" 0 0 50 H I L BNN
+F10 "691313510006" 0 0 50 H I L BNN
+F11 "20A" 0 0 50 H I L BNN
+F12 "THT" 0 0 50 H I L BNN
+DRAW
+P 2 0 0 10 -250 -100 350 -100 N
+P 2 0 0 10 350 -100 350 0 N
+P 2 0 0 10 350 0 -250 0 N
+P 2 0 0 10 -250 0 -250 -100 N
+P 2 0 0 10 -200 -50 -200 -100 N
+P 2 0 0 10 -100 -50 -100 -100 N
+P 2 0 0 10 0 -50 0 -100 N
+P 2 0 0 10 100 -50 100 -100 N
+P 2 0 0 10 200 -50 200 -100 N
+P 2 0 0 10 300 -50 300 -100 N
+C -200 -50 10 0 0 25 N
+C -100 -50 10 0 0 25 N
+C 0 -50 10 0 0 25 N
+C 100 -50 10 0 0 25 N
+C 200 -50 10 0 0 25 N
+C 300 -50 10 0 0 25 N
+X ~ 1 -200 -200 100 U 40 40 0 0 P 
+X ~ 2 -100 -200 100 U 40 40 0 0 P 
+X ~ 3 0 -200 100 U 40 40 0 0 P 
+X ~ 4 100 -200 100 U 40 40 0 0 P 
+X ~ 5 200 -200 100 U 40 40 0 0 P 
+X ~ 6 300 -200 100 U 40 40 0 0 P 
+ENDDRAW
+ENDDEF
+#
+# End Library

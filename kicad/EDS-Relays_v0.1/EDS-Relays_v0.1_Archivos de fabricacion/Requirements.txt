@@ -1,0 +1,12 @@
+PCB dimensions: 49,5 x 86,4 mm
+PCB Material: FR4
+Board Thickness: 1.6mm
+Copper Thickness: 1oz/ft^2
+Solder Mask: Blue
+Legend: White
+Surface Finished: HASL
+IPC Class2
+Solder type: leaded
+Washing required: No
+Compliance: Non-RoHS
+Special instrucctions/processes: No
